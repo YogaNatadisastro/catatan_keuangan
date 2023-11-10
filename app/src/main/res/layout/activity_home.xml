@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bghome"
+    tools:context=".HomeActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Aplikasi"
+                android:textSize="25sp"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_margin="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/pemasukan_left"
+                        android:layout_width="144dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/pemasukan_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fe_smile" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Pemasukan"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_pemasukan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ 2.500.000"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pengeluaran_right"
+                        android:layout_width="144dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/pengeluaran_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cryemot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Pengeluaran"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_pengeluaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ 2.500.000"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            <!--uang masuk-->
+
+            <RelativeLayout
+                android:layout_width="354dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_item"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="28dp"
+                    android:text="Uang Masuk"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/pemasukan_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/white"
+                    android:src="@drawable/uang_masuk" />
+
+            </RelativeLayout>
+
+            <!--Uang Keluar-->
+
+            <RelativeLayout
+                android:layout_width="354dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_item"
+                android:layout_marginTop="17dp"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="28dp"
+                    android:text="Uang Keluar"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/pengeluaran_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/white"
+                    android:src="@drawable/uang_keluar" />
+
+            </RelativeLayout>
+
+            <!--Ada Hutang-->
+
+            <RelativeLayout
+                android:layout_width="354dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="17dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_item"
+                android:elevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="28dp"
+                    android:text="Tanggungan"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/hutang_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/white"
+                    android:src="@drawable/hutang" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="354dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="17dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_item"
+                android:elevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="28dp"
+                    android:text="Dompet-ku"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/dompetku_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/white"
+                    android:src="@drawable/dompet" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        android:elevation="20dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

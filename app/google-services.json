@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64104167424",
+    "project_id": "catatan-keuangan-ee031",
+    "storage_bucket": "catatan-keuangan-ee031.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64104167424:android:bd369489760ffad26280e5",
+        "android_client_info": {
+          "package_name": "com.example.pencatatan_keuangan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuvsuc7OTqRFIip4kq7rpkq8aO4NfeRps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -38,7 +38,7 @@
             android:layout_below="@+id/page_title"/>
 
         <ImageButton
-            android:id="@+id/add_pemasukan"
+            android:id="@+id/add_pengeluaran"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_below="@+id/keterangan"

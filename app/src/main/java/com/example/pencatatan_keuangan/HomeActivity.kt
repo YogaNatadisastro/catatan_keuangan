@@ -32,6 +32,12 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        val imageButton4 = findViewById<ImageButton>(R.id.dompetku_btn)
+        imageButton4.setOnClickListener {
+            val Intent = Intent ( this, Dompetku_Activity::class.java)
+            startActivity(Intent)
+        }
+
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId) {

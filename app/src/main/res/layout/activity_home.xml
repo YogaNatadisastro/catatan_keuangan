@@ -180,35 +180,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="28dp"
-                    android:text="Tanggungan"
-                    android:textSize="13sp"
-                    android:textStyle="bold"/>
-
-                <ImageButton
-                    android:id="@+id/hutang_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="@color/white"
-                    android:src="@drawable/hutang" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="354dp"
-                android:layout_height="76dp"
-                android:layout_marginTop="17dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border_item"
-                android:elevation="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="28dp"
                     android:text="Dompet-ku"
                     android:textSize="13sp"
                     android:textStyle="bold"/>

@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Tambah / Catat Pemasukanmu Disini Ya!"
+            android:text="Tambah / Catat Pengeluara Disini Ya!"
             android:textColor="@color/white"
             android:layout_below="@+id/page_title"/>
 
@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/confirm_btn"
+        android:id="@+id/confirm_btn_pengeluaran"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

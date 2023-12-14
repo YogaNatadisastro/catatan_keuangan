@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 
-class Tanggungan_Activity : AppCompatActivity() {
+class Utang_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tanggungan)
+        setContentView(R.layout.activity_utang)
 
         val ImageButton = findViewById<ImageButton>(R.id.add_tanggungan)
         ImageButton.setOnClickListener {

@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constraint_main"
-    android:background="@drawable/bg_dasar"
-    tools:context=".Tanggungan_Activity">
+    android:background="@drawable/utang_bg"
+    tools:context=".Utang_Activity">
 
     <RelativeLayout
         android:id="@+id/title_page_bar"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Tanggungan"
+            android:text="Utang"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"/>
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Silahkan Cek Riwayat Tanggunganmu!"
+            android:text="Silahkan Cek Riwayat Utang mu!"
             android:textColor="@color/white"
             android:layout_below="@+id/page_title"/>
 
@@ -44,7 +44,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/input_uang"/>
+            android:src="@drawable/add_btn"/>
 
     </RelativeLayout>
 

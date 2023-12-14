@@ -26,14 +26,8 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent)
         }
 
-        val imageButton3 = findViewById<ImageButton>(R.id.hutang_btn)
+        val imageButton3 = findViewById<ImageButton>(R.id.dompetku_btn)
         imageButton3.setOnClickListener {
-            val Intent = Intent (this, Tanggungan_Activity::class.java)
-            startActivity(Intent)
-        }
-
-        val imageButton4 = findViewById<ImageButton>(R.id.dompetku_btn)
-        imageButton4.setOnClickListener {
             val Intent = Intent ( this, Dompetku_Activity::class.java)
             startActivity(Intent)
         }

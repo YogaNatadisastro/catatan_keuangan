@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/confirm_btn"
+        android:id="@+id/confirm_btn_pemasukan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

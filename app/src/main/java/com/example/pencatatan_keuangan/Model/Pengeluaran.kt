@@ -8,6 +8,6 @@ data class Pengeluaran(
 
     var deskripsi: String? = null,
 
-    var input_uang: Int? = null
+    var input_uang: String? = null
 
 )

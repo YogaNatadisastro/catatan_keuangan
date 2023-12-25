@@ -10,8 +10,6 @@ import com.example.pencatatan_keuangan.R
 
 class PemasukanAdapter(private val pemasukanList : ArrayList<Pemasukan>) : RecyclerView.Adapter<PemasukanAdapter.PemasukanAdapter>() {
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PemasukanAdapter {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recyle_item_uang_masuk,
             parent, false)
@@ -26,7 +24,12 @@ class PemasukanAdapter(private val pemasukanList : ArrayList<Pemasukan>) : Recyc
         val currentitem = pemasukanList[position]
 
         holder.note_content.text = currentitem.note_content
-        holder.uang_masuk.text = currentitem.input_uang
+        holder.uang_masuk.text = currentitem.input_uang.toString()
+
+    }
+
+    fun updateData(newDataList: List<Pemasukan>) {
+
     }
 
     class PemasukanAdapter(itemView : View) : RecyclerView.ViewHolder(itemView){

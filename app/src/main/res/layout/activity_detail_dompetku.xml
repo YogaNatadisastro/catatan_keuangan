@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_dasar"
     tools:context=".Detail_Dompetku">
+
+    <RelativeLayout
+        android:id="@+id/title_page_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dompet-ku"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Simpan Catatan Keuangan Cash dan saldo disini"
+            android:layout_below="@+id/page_title"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_page_bar"
+        app:layout_constraintTop_toBottomOf="@id/title_page_bar"
+        android:layout_marginVertical="26dp"
+        android:background="@drawable/border_item_input_uang"
+        android:orientation="vertical"
+        android:layout_margin="50dp">
+
+        <EditText
+            android:id="@+id/deskripsi_dompet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:gravity="top"
+            android:hint="Deskripsi"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/jumlah_uang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:gravity="top"
+            android:hint="Jumlah Uang"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:id="@+id/jenis_dompet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/radio_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:text="Cash" />
+
+            <RadioButton
+                android:id="@+id/radio_saldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Saldo" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/confirm_btn_pemasukan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Simpan"
+        android:textStyle="bold"
+        android:textColor="#01A3FF"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

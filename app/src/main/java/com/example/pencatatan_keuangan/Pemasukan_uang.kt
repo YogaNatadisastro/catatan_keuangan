@@ -5,10 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pencatatan_keuangan.Adapter.PemasukanAdapter
 import com.example.pencatatan_keuangan.Model.Pemasukan
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -20,6 +23,8 @@ import com.google.firebase.database.getValue
 class Pemasukan_uang : AppCompatActivity() {
 
     private lateinit var db_ref : DatabaseReference
+    private lateinit var mUser: FirebaseUser
+    private lateinit var mAuth: FirebaseAuth
     private lateinit var pemasukanRecyclerView: RecyclerView
     private lateinit var pemasukanArrayList: ArrayList<Pemasukan>
 
@@ -37,14 +42,13 @@ class Pemasukan_uang : AppCompatActivity() {
             startActivity(Intent)
         }
 
-        pemasukanArrayList = arrayListOf<Pemasukan>()
-        getPemasukanData()
+        pemasukanArrayList = arrayListOf()
 
-    }
+        mAuth = FirebaseAuth.getInstance()
+        mUser = mAuth.currentUser!!
 
-    private fun getPemasukanData() {
-
-        db_ref = FirebaseDatabase.getInstance().getReference("Pemasukan")
+        val userId = mUser.uid
+        db_ref = FirebaseDatabase.getInstance().getReference("Pemasukan").child(userId)
 
         db_ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -54,6 +58,8 @@ class Pemasukan_uang : AppCompatActivity() {
                         pemasukanArrayList.add(pemasukan!!)
                     }
                     pemasukanRecyclerView.adapter = PemasukanAdapter(pemasukanArrayList)
+                } else {
+                    Toast.makeText(this@Pemasukan_uang, "Data Tidak Ada...", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -62,6 +68,11 @@ class Pemasukan_uang : AppCompatActivity() {
             }
 
         })
+
+    }
+
+    private fun getPemasukanData() {
+
 
     }
 

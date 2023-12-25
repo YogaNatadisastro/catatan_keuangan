@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/l_border"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tanggal"
+        android:textColor="#01A3FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginVertical="4dp"/>
+
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tanggal"
+        android:text="keterangan"
+        android:textColor="#01A3FF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginVertical="4dp"/>
+
+    <TextView
+        android:id="@+id/input_uang"
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="uang"
+        android:textColor="#01A3FF"
+        android:textStyle="bold"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>

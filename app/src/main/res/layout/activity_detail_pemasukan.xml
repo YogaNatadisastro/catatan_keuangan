@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:gravity="top"
-            android:hint="Content"
+            android:hint="Judul Pemasukan"
             android:padding="12dp"
             android:textColor="@color/black"
             android:textSize="12sp" />

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129652213218",
+    "project_id": "aplikasi-catatan-keuanga-86e62",
+    "storage_bucket": "aplikasi-catatan-keuanga-86e62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129652213218:android:c0ad3493c8e58ad20ba5bb",
+        "android_client_info": {
+          "package_name": "com.example.pencatatan_keuangan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1pHCo2XE-4VF9Hb5kCl9ZSuR2pp7uQ4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

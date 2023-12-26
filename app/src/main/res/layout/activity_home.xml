@@ -17,7 +17,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama Aplikasi"
+                android:text="STUDENTS FINANCE"
                 android:textSize="25sp"
                 android:padding="15dp"
                 android:textStyle="bold"

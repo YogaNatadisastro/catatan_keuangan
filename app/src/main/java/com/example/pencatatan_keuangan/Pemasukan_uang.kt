@@ -43,7 +43,6 @@ class Pemasukan_uang : AppCompatActivity() {
         }
 
         pemasukanArrayList = arrayListOf()
-
         mAuth = FirebaseAuth.getInstance()
         mUser = mAuth.currentUser!!
 

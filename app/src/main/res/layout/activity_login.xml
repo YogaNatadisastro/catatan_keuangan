@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:gravity="center"
-            android:text="Nama Aplikasi"
+            android:text="STUDENTS FINANCE"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -99,11 +99,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Slogan"
-                android:textSize="25sp"
+                android:text="Kelola Keuangan\nWujudkan Impian"
+                android:textSize="15sp"
                 android:layout_marginTop="30sp"
-                android:textColor="#02A3FE"
-                android:textStyle="bold"/>
+                android:textColor="#02A3FE"/>
 
         </LinearLayout>
 

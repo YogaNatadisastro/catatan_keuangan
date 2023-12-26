@@ -62,6 +62,7 @@
 
         <EditText
             android:id="@+id/jumlah_uang"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
@@ -71,34 +72,10 @@
             android:textColor="@color/black"
             android:textSize="12sp" />
 
-        <RadioGroup
-            android:id="@+id/jenis_dompet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <RadioButton
-                android:id="@+id/radio_cash"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:text="Cash" />
-
-            <RadioButton
-                android:id="@+id/radio_saldo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="Saldo" />
-
-
-        </RadioGroup>
-
     </LinearLayout>
     
     <Button
-        android:id="@+id/confirm_btn_pemasukan"
+        android:id="@+id/confirm_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

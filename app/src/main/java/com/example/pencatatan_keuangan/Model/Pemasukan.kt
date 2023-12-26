@@ -15,6 +15,8 @@ data class Pemasukan(
 
     var input_uang : String? = null,
 
+    var mfgDt : Long = 0
+
 ) : Parcelable
 
 

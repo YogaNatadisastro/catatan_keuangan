@@ -9,6 +9,8 @@ import android.widget.Toast
 import com.example.pencatatan_keuangan.Model.Pemasukan
 import com.example.pencatatan_keuangan.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -21,15 +23,24 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var mUser : FirebaseUser
+    private lateinit var mAuth : FirebaseAuth
+    private lateinit var userId : String
     private lateinit var text_totalPemasukan: TextView
     private lateinit var text_totalPengeluaran: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
+
+        mAuth = FirebaseAuth.getInstance()
+        mUser = mAuth.currentUser!!
+        userId = mUser.uid
+
         setContentView(binding.root)
         testGetData()
         testGetDataPengeluaran()
+
 
         val imageButton1 = findViewById<ImageButton>(R.id.pemasukan_btn)
         imageButton1.setOnClickListener {
@@ -74,11 +85,11 @@ class HomeActivity : AppCompatActivity() {
 
     private fun testGetData() {
         text_totalPemasukan = findViewById(R.id.total_pemasukan)
-        databaseReference = FirebaseDatabase.getInstance().getReference("Pemasukan")
-        databaseReference.addValueEventListener(object : ValueEventListener {
+        val db_refPemasukan = FirebaseDatabase.getInstance().getReference("Total Pemasukan").child(userId)
+        db_refPemasukan.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val data : String = snapshot.child("input_uang").getValue().toString()
-                text_totalPemasukan.setText(data)
+                val data : String = snapshot.child("total").value.toString()
+                text_totalPemasukan.text = data
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -90,11 +101,11 @@ class HomeActivity : AppCompatActivity() {
 
     private fun testGetDataPengeluaran() {
         text_totalPengeluaran = findViewById(R.id.total_pengeluaran)
-        databaseReference = FirebaseDatabase.getInstance().getReference("Pengluaran")
-        databaseReference.addValueEventListener(object : ValueEventListener {
+        val db_refPengeluaran = FirebaseDatabase.getInstance().getReference("Total Pengeluaran").child(userId)
+        db_refPengeluaran.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val data : String = snapshot.getValue().toString()
-                text_totalPengeluaran.setText(data)
+                val data : String = snapshot.child("total").value.toString()
+                text_totalPengeluaran.text = data
             }
 
             override fun onCancelled(error: DatabaseError) {
